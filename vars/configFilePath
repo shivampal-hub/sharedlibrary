@@ -1,0 +1,5 @@
+SLACK_CHANNEL_NAME  = #slacknotification1
+ENVIRONMENT         = prod
+CODE_BASE_PATH      = env/prod
+ACTION_MESSAGE      = Build Successful
+KEEP_APPROVAL_STAGE = true
