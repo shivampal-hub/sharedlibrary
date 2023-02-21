@@ -1,5 +1,5 @@
 SLACK_CHANNEL_NAME  = #slacknotification1
 ENVIRONMENT         = prod
 CODE_BASE_PATH      = env/prod
-ACTION_MESSAGE      = Build Successful
+ACTION_MESSAGE      = *${currentBuild.currentResult}:* \n *Job_Name:* '${JOB_NAME}' \n *USER:* '${USER}' \n *Stage_Name:* ${STAGE_NAME} \n *Build_Number:* '${BUILD_NUMBER}' \n *More info at:* '${BUILD_URL}'
 KEEP_APPROVAL_STAGE = true
