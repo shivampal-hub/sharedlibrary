@@ -27,17 +27,17 @@ def slackSend(String buildResult) {
   }
   else if ( buildResult == "FAILURE") {
     slackSend channel: "${p.SLACK_CHANNEL_NAME}",
-    message: message: " *${currentBuild.currentResult}:* \n *Job_Name:* '${JOB_NAME}' \n *USER:* '${USER}' \n *Stage_Name:* ${STAGE_NAME} \n *Build_Number:* '${BUILD_NUMBER}' \n *More info at:* '${BUILD_URL}'",
+    message: "${p.ACTION_MESSAGE}",
       tokenCredentialId: 'slack-token'
   }
   else if ( buildResult == "UNSTABLE") {
     slackSend channel: "${p.SLACK_CHANNEL_NAME}",
-    message: message: " *${currentBuild.currentResult}:* \n *Job_Name:* '${JOB_NAME}' \n *USER:* '${USER}' \n *Stage_Name:* ${STAGE_NAME} \n *Build_Number:* '${BUILD_NUMBER}' \n *More info at:* '${BUILD_URL}'",
+    message: "${p.ACTION_MESSAGE}",
       tokenCredentialId: 'slack-token'
   }
   else {
     slackSend channel: "${p.SLACK_CHANNEL_NAME}",
-      message: message: " *${currentBuild.currentResult}:* \n *Job_Name:* '${JOB_NAME}' \n *USER:* '${USER}' \n *Stage_Name:* ${STAGE_NAME} \n *Build_Number:* '${BUILD_NUMBER}' \n *More info at:* '${BUILD_URL}'",
+      message: "${p.ACTION_MESSAGE}",
       tokenCredentialId: 'slack-token'
   }
 }
