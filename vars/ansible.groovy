@@ -4,7 +4,7 @@ def readPropertyFile() {
 }
 
 def clone() {
-  git branch: 'master', url: ''
+  git branch: 'master', url: 'https://github.com/shivampal-hub/ansible.git'
 }
 
 def approval() {
@@ -15,7 +15,7 @@ def approval() {
 }
 
 def playbookExecution() {
-  ansiblePlaybook credentialsId: 'assignment6-ssh', disableHostKeyChecking: true, installation: 'ansible1', inventory: 'inv', playbook: 'role_jenkins.yml'
+  ansiblePlaybook credentialsId: 'assignment-ssh', disableHostKeyChecking: true, installation: 'ansible1', inventory: 'inv', playbook: 'role_jenkins.yml'
 }
 
 def slackSend(String buildResult) {
